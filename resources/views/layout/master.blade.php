@@ -10,6 +10,8 @@
         <link href="assets/css/bootstrap.css" rel="stylesheet" />
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        @yield('style')
+        @yield('script')
     </head>
     <body>
         <div id="layoutAuthentication">
