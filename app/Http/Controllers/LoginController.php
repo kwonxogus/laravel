@@ -16,4 +16,8 @@ class LoginController extends Controller
 		*/
 		return view('login.index');
 	}
+
+	public function loginAction(Request $request){
+		dd($request->all());
+	}
 }

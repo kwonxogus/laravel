@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 */
 Route::match(['get','post'], '/', [LoginController::class, 'login']);
+Route::match(['post'], '/loginAction', [LoginController::class, 'loginAction']);

@@ -3,7 +3,9 @@
 @section('script')
 <script>
 	function go_action(){
-		alert(1);
+		//submit()전에 데이터 검사 필요
+		const loginform = document.getElementById("loginform");
+		loginform.submit();
 	}
 
 	function forgotP(){
@@ -16,7 +18,8 @@
 <div style="width:50%; margin: 10px auto; margin-top:50px;">
 	<div id="container">
 		<!--  login 폼 영역을 : loginBox -->
-		<div id="loginBox">
+		<form id="loginform" method="post" action="/loginAction">
+			@csrf
 			<!-- 로그인 페이지 타이틀 -->
 			<div id="loginBoxTitle">Laravel Login</div>
 			<!-- 아이디, 비번, 버튼 박스 -->
@@ -30,10 +33,10 @@
 					<input type="password" name="upw" class="form-control">
 				</div>
 				<div class="button-login-box my-4">
-					<button type="button" class="btn btn-primary btn-xs" style="width:100%">로그인</button>
+					<button type="button" class="btn btn-primary btn-xs" style="width:50%" onclick="go_action();">로그인</button>
 				</div>
 			</div>
-		</div>
+		</form>
 	</div>
 </div>
 @endsection
