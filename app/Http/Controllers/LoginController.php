@@ -10,10 +10,10 @@ class LoginController extends Controller
     //
 	public function login(Request $request)
 	{
-		/**/
+		/*
 		$results = DB::select('select * from member_list');
 		dd($results);
-		
+		*/
 		return view('login.index');
 	}
 }

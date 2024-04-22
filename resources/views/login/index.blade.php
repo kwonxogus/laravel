@@ -11,34 +11,26 @@
 	}
 </script>
 @endsection
+
 @section('content')
-<div class="container">
-	<div class="row justify-content-center">
-		<div class="col-lg-5">
-			<div class="card shadow-lg border-0 rounded-lg mt-5">
-				<div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
-				<div class="card-body">
-					<form name="form" id="form" action="" method="POST">
-						<div class="form-floating mb-3">
-							<input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
-							<label for="inputEmail">Email address</label>
-						</div>
-						<div class="form-floating mb-3">
-							<input class="form-control" id="inputPassword" type="password" placeholder="Password" />
-							<label for="inputPassword">Password</label>
-						</div>
-						<div class="form-check mb-3">
-							<input class="form-check-input" id="inputRememberEmail" type="checkbox" value="" />
-							<label class="form-check-label" for="inputRememberEmail">Remember Email</label>
-						</div>
-						<div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-							<a class="small" href="javascript:forgotP();">Forgot Password?</a>
-							<a class="btn btn-primary" href="javascript:go_action();">Login</a>
-						</div>
-					</form>
+<div style="width:50%; margin: 10px auto; margin-top:50px;">
+	<div id="container">
+		<!--  login 폼 영역을 : loginBox -->
+		<div id="loginBox">
+			<!-- 로그인 페이지 타이틀 -->
+			<div id="loginBoxTitle">Laravel Login</div>
+			<!-- 아이디, 비번, 버튼 박스 -->
+			<div id="inputBox">
+				<div class="input-form-box my-4">
+					<span>아이디 </span>
+					<input type="text" name="uid" class="form-control">
 				</div>
-				<div class="card-footer text-center py-3">
-					<!-- <div class="small"><a href="register.html">Need an account? Sign up!</a></div> -->
+				<div class="input-form-box my-4">
+					<span>비밀번호 </span>
+					<input type="password" name="upw" class="form-control">
+				</div>
+				<div class="button-login-box my-4">
+					<button type="button" class="btn btn-primary btn-xs" style="width:100%">로그인</button>
 				</div>
 			</div>
 		</div>
