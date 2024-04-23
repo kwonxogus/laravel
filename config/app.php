@@ -183,6 +183,17 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'App'             => Illuminate\Support\Facades\App::class,
+        //'Arr'             => Illuminate\Support\Arr::class,
+        'Artisan'         => Illuminate\Support\Facades\Artisan::class,
+        'Auth'            => Illuminate\Support\Facades\Auth::class,
+        'Blade'           => Illuminate\Support\Facades\Blade::class,
+        'Broadcast'       => Illuminate\Support\Facades\Broadcast::class,
+        'Cache'           => Illuminate\Support\Facades\Cache::class,
+        'Config'          => Illuminate\Support\Facades\Config::class,
+        'Cookie'          => Illuminate\Support\Facades\Cookie::class,
+        'Crypt'           => Illuminate\Support\Facades\Crypt::class,
+        'DB'              => Illuminate\Support\Facades\DB::class,
     ])->toArray(),
 
 ];
