@@ -1,6 +1,14 @@
 @extends('layout.master')
 
 @section('script')
+
+@if(Session::has('alert'))
+	@php
+		echo '<script>';
+		echo "alert('".Session::get('alert')."');";
+		echo '</script>';
+	@endphp
+@endif
 <script>
 	function go_action(){
 		//submit()전에 데이터 검사 필요
