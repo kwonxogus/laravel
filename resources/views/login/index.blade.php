@@ -34,11 +34,11 @@
 			<div id="inputBox">
 				<div class="input-form-box my-4">
 					<span>아이디 </span>
-					<input type="text" name="uid" class="form-control">
+					<input type="text" name="uid" class="form-control" required>
 				</div>
 				<div class="input-form-box my-4">
 					<span>비밀번호 </span>
-					<input type="password" name="upw" class="form-control">
+					<input type="password" name="upw" class="form-control" required>
 				</div>
 				<div class="button-login-box my-4">
 					<button type="button" class="btn btn-primary btn-xs" style="width:50%" onclick="go_action();">로그인</button>

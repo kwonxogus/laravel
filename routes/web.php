@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MainController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,5 +19,6 @@ Route::get('/', function () {
     //return view('welcome');
 });
 */
-Route::match(['get','post'], '/', [LoginController::class, 'login']);
-Route::match(['post'], '/loginAction', [LoginController::class, 'loginAction']);
+Route::match(['get','post'], '/', [LoginController::class, 'login'])            ->name('login');
+Route::match(['post'], '/loginAction', [LoginController::class, 'loginAction']) ->name('loginAction');
+Route::match(['get','post'], '/main', [MainController::class, 'main'])          ->name('main');

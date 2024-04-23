@@ -32,5 +32,15 @@ class LoginController extends Controller
 		if(!isset($idChk->id)){
 			return redirect()->back() ->with('alert', 'id가 존재하지 않습니다.');
 		}
+		else{
+			//현재 디비에 패스워드 암호화 없음
+			if($req['upw'] != $idChk->pw){
+				return redirect()->back() ->with('alert', '비밀번호를 틀렸습니다.');
+			}
+		}
+		
+		//로그인 성공시 세션에 아이디 정보 담음
+		$request->session()->put('id',$req['uid']);
+		return redirect()->route('main');
 	}
 }
