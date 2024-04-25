@@ -21,4 +21,7 @@ Route::get('/', function () {
 */
 Route::match(['get','post'], '/', [LoginController::class, 'login'])            ->name('login');
 Route::match(['post'], '/loginAction', [LoginController::class, 'loginAction']) ->name('loginAction');
-Route::match(['get','post'], '/main', [MainController::class, 'main'])          ->name('main');
+
+Route::middleware(['login'])->group(function(){
+    Route::match(['get','post'], '/main', [MainController::class, 'main'])          ->name('main');
+});
