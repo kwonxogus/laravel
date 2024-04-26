@@ -21,6 +21,7 @@ class LoginController extends Controller
 
 	public function loginAction(Request $request){
 		//dd($request->all());
+		//dd(hash("sha512","1234"));
 		$req = $request->all();
 
 		$idChk = DB::table('member_list')
@@ -34,7 +35,7 @@ class LoginController extends Controller
 		}
 		else{
 			//현재 디비에 패스워드 암호화 없음
-			if($req['upw'] != $idChk->pw){
+			if(hash("sha512",$req['upw']) != $idChk->pw){
 				return redirect()->back() ->with('alert', '비밀번호를 틀렸습니다.');
 			}
 		}
