@@ -11,6 +11,20 @@
 @endif
 <script>
 	function go_action(){
+
+		const uid = document.getElementById("uid").value;
+		const upw = document.getElementById("upw").value;
+
+		if(uid == ''){
+			alert("id를 입력해주세요");
+			return false;
+		}
+
+		if(upw == ''){
+			alert("비밀번호를 입력해주세요");
+			return false;
+		}
+
 		//submit()전에 데이터 검사 필요
 		const loginform = document.getElementById("loginform");
 		loginform.submit();
@@ -34,11 +48,11 @@
 			<div id="inputBox">
 				<div class="input-form-box my-4">
 					<span>아이디 </span>
-					<input type="text" name="uid" class="form-control" required>
+					<input type="text" id="uid" name="uid" class="form-control">
 				</div>
 				<div class="input-form-box my-4">
 					<span>비밀번호 </span>
-					<input type="password" name="upw" class="form-control" required>
+					<input type="password" id="upw" name="upw" class="form-control">
 				</div>
 				<div class="button-login-box my-4">
 					<button type="button" class="btn btn-primary btn-xs" style="width:50%" onclick="go_action();">로그인</button>
