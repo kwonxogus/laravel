@@ -44,4 +44,8 @@ class LoginController extends Controller
 		$request->session()->put('id',$req['uid']);
 		return redirect()->route('main');
 	}
+
+	public function joinForm(Request $request){
+		return view('login.joinForm');
+	}
 }

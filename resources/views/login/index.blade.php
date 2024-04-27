@@ -11,7 +11,6 @@
 @endif
 <script>
 	function go_action(){
-
 		const uid = document.getElementById("uid").value;
 		const upw = document.getElementById("upw").value;
 
@@ -28,6 +27,10 @@
 		//submit()전에 데이터 검사 필요
 		const loginform = document.getElementById("loginform");
 		loginform.submit();
+	}
+
+	function join_mem(){
+		const wnd = window.open("/joinForm","_blank","height=400px,width=500px");
 	}
 
 	function forgotP(){
@@ -55,7 +58,8 @@
 					<input type="password" id="upw" name="upw" class="form-control">
 				</div>
 				<div class="button-login-box my-4">
-					<button type="button" class="btn btn-primary btn-xs" style="width:50%" onclick="go_action();">로그인</button>
+					<button type="button" class="btn btn-primary btn-xs" style="width:48%" onclick="go_action();">로그인</button>
+					<button type="button" class="btn btn-primary btn-xs" style="width:48%" onclick="join_mem();">회원가입</button>
 				</div>
 			</div>
 		</form>
