@@ -24,3 +24,8 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+
+function onlyNumber(obj){
+    const txt = obj.value.replace(/[^-0-9]/g,'');
+    obj.value=txt;
+}
