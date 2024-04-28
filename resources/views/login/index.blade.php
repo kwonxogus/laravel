@@ -30,7 +30,7 @@
 	}
 
 	function join_mem(){
-		const wnd = window.open("/joinForm","_blank","height=400px,width=500px");
+		const wnd = window.open("/joinForm","_blank","height=600px,width=500px");
 	}
 
 	function forgotP(){
