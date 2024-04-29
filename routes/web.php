@@ -19,11 +19,17 @@ Route::get('/', function () {
     //return view('welcome');
 });
 */
-Route::match(['get','post'], '/', [LoginController::class, 'login'])                ->name('login');
-Route::match(['post'], '/loginAction', [LoginController::class, 'loginAction'])     ->name('loginAction');
-Route::match(['get','post'], '/joinForm', [LoginController::class, 'joinForm'])     ->name('joinForm');
-Route::match(['post'], '/joinAction', [LoginController::class, 'joinAction'])       ->name('joinAction');
 
+#로그인 상태에 로그인페이지 또는 회원가입 페이지 접근 막기
+Route::middleware(['login'])->group(function(){
+    Route::match(['get','post'], '/', [LoginController::class, 'login'])                ->name('login');
+    Route::match(['post'], '/loginAction', [LoginController::class, 'loginAction'])     ->name('loginAction');
+    Route::match(['get','post'], '/joinForm', [LoginController::class, 'joinForm'])     ->name('joinForm');
+    Route::match(['post'], '/joinAction', [LoginController::class, 'joinAction'])       ->name('joinAction');
+});
+
+
+#비로그인시 페이지 접근 막기
 Route::middleware(['login'])->group(function(){
     Route::match(['get','post'], '/main', [MainController::class, 'main'])          ->name('main');
 });
