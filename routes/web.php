@@ -26,11 +26,11 @@ Route::middleware(['already'])->group(function(){
     Route::match(['post'], '/loginAction', [LoginController::class, 'loginAction'])     ->name('loginAction');
     Route::match(['get','post'], '/joinForm', [LoginController::class, 'joinForm'])     ->name('joinForm');
     Route::match(['post'], '/joinAction', [LoginController::class, 'joinAction'])       ->name('joinAction');
-    Route::match(['get','post'], '/logout', [LoginController::class, 'logout'])         ->name('logout');
 });
 
 
 #비로그인시 페이지 접근 막기
 Route::middleware(['login'])->group(function(){
     Route::match(['get','post'], '/main', [MainController::class, 'main'])          ->name('main');
+    Route::match(['get','post'], '/logout', [LoginController::class, 'logout'])         ->name('logout');
 });

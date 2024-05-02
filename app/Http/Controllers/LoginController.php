@@ -88,6 +88,8 @@ class LoginController extends Controller
 
 	public function logout(Request $request){
 		//세션 삭제 시키고 로그인 페이지로 보냄
-		
+		$request->session()->forget('id');
+
+		return redirect()->route('login');
 	}
 }
