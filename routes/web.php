@@ -26,6 +26,7 @@ Route::middleware(['already'])->group(function(){
     Route::match(['post'], '/loginAction', [LoginController::class, 'loginAction'])     ->name('loginAction');
     Route::match(['get','post'], '/joinForm', [LoginController::class, 'joinForm'])     ->name('joinForm');
     Route::match(['post'], '/joinAction', [LoginController::class, 'joinAction'])       ->name('joinAction');
+    Route::match(['get','post'], '/logout', [LoginController::class, 'logout'])         ->name('logout');
 });
 
 
