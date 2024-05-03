@@ -31,6 +31,6 @@ Route::middleware(['already'])->group(function(){
 
 #비로그인시 페이지 접근 막기
 Route::middleware(['login'])->group(function(){
-    Route::match(['get','post'], '/main', [MainController::class, 'main'])          ->name('main');
+    Route::match(['get','post'], '/main', [MainController::class, 'main'])              ->name('main');
     Route::match(['get','post'], '/logout', [LoginController::class, 'logout'])         ->name('logout');
 });
