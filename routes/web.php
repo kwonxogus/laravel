@@ -33,4 +33,5 @@ Route::middleware(['already'])->group(function(){
 Route::middleware(['login'])->group(function(){
     Route::match(['get','post'], '/main', [MainController::class, 'main'])              ->name('main');
     Route::match(['get','post'], '/logout', [LoginController::class, 'logout'])         ->name('logout');
+    Route::match(['get'], '/listP/{no}', [MainController::class, 'listP'])              ->name('listP');
 });

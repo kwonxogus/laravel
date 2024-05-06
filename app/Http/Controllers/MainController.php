@@ -16,5 +16,18 @@ class MainController extends Controller
         return view('main')->with('list',$list);
     }
 
+    #게시글 보는 페이지
+    public function listP(Request $request, $no){
+        $board = DB::table('board_list')
+                    ->select('*')
+                    ->where('no',$no)
+                    ->first();
+        
+        if($board->save_status != 'Y' || !isset($board) ){
+            return redirect()->back()->with('alert','삭제되었거나 존재하지 않는 글 입니다.');
+        }
+
+        
+    }
     #게시글 작성, 리스트, 좋아요, 댓글 만들 예정
 }
