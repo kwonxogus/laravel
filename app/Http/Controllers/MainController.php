@@ -22,12 +22,14 @@ class MainController extends Controller
                     ->select('*')
                     ->where('no',$no)
                     ->first();
-        
-        if($board->save_status != 'Y' || !isset($board) ){
+        if(!isset($board)){
             return redirect()->back()->with('alert','삭제되었거나 존재하지 않는 글 입니다.');
         }
-
-        
+        if($board->save_status != 'Y'){
+            return redirect()->back()->with('alert','삭제되었거나 존재하지 않는 글 입니다.');
+        }
+        return view('board.board')->with('board', $board);
     }
+    
     #게시글 작성, 리스트, 좋아요, 댓글 만들 예정
 }

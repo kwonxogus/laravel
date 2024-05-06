@@ -21,7 +21,7 @@
             <i class="fas fa-table me-1"></i>
             리스트 예시
         </div>
-        <div class="card-body">
+        <div class="card-body text-center">
             <table id="datatablesSimple">
                 <thead>
                     <tr>
