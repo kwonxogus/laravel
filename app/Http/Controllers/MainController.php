@@ -31,5 +31,7 @@ class MainController extends Controller
         return view('board.board')->with('board', $board);
     }
     
-    #게시글 작성, 리스트, 좋아요, 댓글 만들 예정
+    #게시글 작성, 좋아요, 댓글 만들 예정
+    #리스트에서 검색, 페이징
+    
 }
