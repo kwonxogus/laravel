@@ -33,5 +33,11 @@ class MainController extends Controller
     
     #게시글 작성, 좋아요, 댓글 만들 예정
     #리스트에서 검색, 페이징
+
+
+
+    #Redis, git 명령어 확인
+    #git stash, pop, apply, list
+
     
 }
