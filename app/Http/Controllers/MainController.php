@@ -37,6 +37,7 @@ class MainController extends Controller
 
 
     #Redis, git 명령어 확인
+    # git 명령어 연습
     #git stash, pop, apply, list
 
     
