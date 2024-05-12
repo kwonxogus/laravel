@@ -38,6 +38,10 @@ class MainController extends Controller
 
     #Redis, git 명령어 확인
     # git 명령어 연습
+    # git add 파일명 ( staged로 올리는 것)
+    # git add -A (변경파일 전체 올림)
+    # git commit -m [커밋메시지]
+    # 
     #git stash, pop, apply, list
 
     
