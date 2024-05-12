@@ -41,7 +41,7 @@ class MainController extends Controller
     # git add 파일명 ( staged로 올리는 것)
     # git add -A (변경파일 전체 올림)
     # git commit -m [커밋메시지]
-    # 
+    # git push origin
     #git stash, pop, apply, list
 
     
