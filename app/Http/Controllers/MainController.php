@@ -42,7 +42,10 @@ class MainController extends Controller
     # git add -A (변경파일 전체 올림)
     # git commit -m [커밋메시지]
     # git push origin
-    #git stash, pop, apply, list
+    # git stash, pop, apply, list
+    # 수정한 파일을 올리려고 하는데
+    # 같은 파일 변경내용이 적용되어있을때 사용함
+    # stash로 내가 수정한 파일 임시로 넣고 변경된 내용 가져와서 적용
 
     
 }
